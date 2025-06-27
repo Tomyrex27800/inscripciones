@@ -1,137 +1,265 @@
-h1{
-    text-align: center;
-    margin: 2rem;
-}
-h2{
-    text-algin: center;
-    margin: 1rem 0;
-}
-* {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
-    padding: 0 ;
-}
-
-.container-year{
-    padding: 2em;
-    background-color: beige;
-    width: 86%;
-    margin: 0 auto;
-    border-radius: 20px;
-}
-.paso{
-    width: 70%;
-    padding: 2rem;
-    background-color: #c25939;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    justify-content: center;
-}
-    
-.izquierda{
-    margin: 2rem auto 2rem 0;
-}
-
-.derecha{
-    margin: 2rem 0 2rem auto;
-}
-
-.container-mitad{
-    display: flex; 
-}
-
 /*
-.container-materia{
-    display: flex;  
-    justify-content: space-around;  
-}
-.container-mitad{
-    width: 50%;
-}
+  A continuación, te dejo el diseño completo y mejorado del CSS para acompañar tu HTML actual,
+  manteniendo el fondo con `background-image`, mejorando el contraste y modernizando los bloques `.paso`.
+*/
 
-.paso h3 {
-    margin-top: 1rem;
-    color: #0d6efd;
-}
-
-
-.paso p {
-    margin-bottom: 1rem;
-    color: #555;
-}
-
-
-.paso form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: flex-start;
-}
-
-.paso form button[type="submit"]:hover {
-    background-color: #084dc4;
+/* ======= RESET Y FUENTE GENERAL ======= */
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 2rem;
-    color: #333;
+  background-image: url('https://picsum.photos/3000/2000');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  min-height: 100vh;
 }
-.centrar  {
-    text-align: center;
+
+/* ======= ENCABEZADO ======= */
+.container-h1 {
+  width: 100%;
+  background-color: rgba(0, 0, 51, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
+
 h1 {
-    text-align: center;
-    margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #ffffff;
 }
 
-.materia {
-    margin-bottom: 3rem;
-    width: 30%;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+/* ======= CONTENEDOR GENERAL DE CADA AÑO ======= */
+.container-year {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  color: #333;
 }
 
-div > div:nth-of-type(1)::before {
-    font-weight: bold;
-    color: #0d6efd;
-    display: block;
-    margin-bottom: 1rem;
+.container-year h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #222;
 }
 
-div > div:nth-of-type(2)::before {
-    font-weight: bold;
-    color: #0d6efd;
-    display: block;
-    margin-bottom: 1rem;
+/* ======= BLOQUES DE PASO ======= */
+.paso {
+  background-color: #ffffff;
+  color: #333;
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
 }
 
-div > div:nth-of-type(3)::before {
-    font-weight: bold;
-    color: #0d6efd;
-    display: block;
-    margin-bottom: 1rem;
+.centrar {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-h2, h3, h4, h5 {
+.container-mitad {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.container-mitad div {
+  flex: 1;
+  min-width: 280px;
+}
+
+.paso img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.izquierda {
+  margin-right: 2rem;
+}
+.derecha {
+  margin-left: 2rem;
+}
+
+/* ======= FORMULARIOS ======= */
+.download-btn {
+    display: inline-block;
     margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background-color: #5372ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #31459f;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem auto 0 auto;
+  padding: 1rem;
+  background: #f7f7f7;
+  border-radius: 10px;
 }
 
-form input[type="text"] {
-    width: 50%;
-    padding: 0.6rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+form input,
+form button {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
 }
-*/
+
+form button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* ======= BOTÓN EXPANDIBLE ======= */
+.toggle-btn {
+  margin-top: 1rem;
+  background-color: #28a745;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+  background-color: #1e7e34;
+}
+
+/* ======= MATERIAS ======= */
+.container-materia {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.materia {
+  background-color: #ffffff;
+  color: #333;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+    list-style: none;
+}
+
+/* ======= FOOTER ======= */
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer hr {
+    margin: 1rem auto;
+    width: 60%;
+    border: 0;
+    height: 1px;
+    background: #555;
+}
+
+.container-flex-footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+    margin-right: 0 auto;
+}
+
+.footer-logo img {
+    margin-bottom: 1rem;
+}
+
+.footer-logo p {
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.footer-section{
+    text-align: start;
+    margin-bottom: 2rem;
+}
+.footer-section h4 {
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}   
+.footer-bottom{
+    padding: 2rem 0;
+}

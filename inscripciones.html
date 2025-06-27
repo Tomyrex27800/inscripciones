@@ -1,98 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="inscripciones.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
     <title>Inscripciones</title>
 </head>
 <body>
-    <h1>Inscripciones</h1>
-    <div>
-        <div class="container-year">
-            <h2 class="titule">Ingreso a Primer año</h2>
-            
-            <div class="paso izquierda">
-                <h3 class="centrar">Charlas informativas</h3>
-                <div class="container-mitad">
-                    <div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non nihil asperiores, quasi, doloribus aliquid explicabo, accusamus corporis recusandae voluptatibus adipisci numquam? Suscipit pariatur perferendis numquam aliquid qui et quia consequuntur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam quasi sit laboriosam ipsa! Molestias quaerat consectetur eius doloribus libero itaque debitis iusto quasi, ad necessitatibus minima repellendus officia voluptate maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eos reiciendis laboriosam praesentium illo corrupti dolorum reprehenderit facilis ad atque sint nostrum nisi, officiis qui eum est dolor? Consequatur, accusamus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime alias quod sequi, deleniti unde explicabo tempora expedita repellat optio culpa blanditiis et magni velit nisi architecto? Sapiente mollitia quaerat reprehenderit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, aperiam ad! Officia, esse exercitationem iure delectus qui, ex veniam, magnam quia eos voluptate id similique pariatur explicabo tempore at. Quibusdam.</p>
-                    </div>
-                    <div>
-                        <img src="https://picsum.photos/300" alt="reunion increible" width="300" height="300">
-                    </div>
-                </div>
-                <h3>Próxima charla: Especialidades</h3>
-                <form action="">
-                    <input type="text" name="Nombre" placeholder="Nombre" required>
-                    <input type="text" name="Apellido" placeholder="Apellido" required>
-                    <input type="text" name="Email" placeholder="Email" required>
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-            
-            <div class="paso derecha">
-                <h3>
-                    Entrevista
-                </h3>
-                <p>Entrevista familiar con documentos</p>
-                <form action="">
-                    <input type="text" name="Nombre" placeholder="Nombre" required>
-                    <input type="text" name="Apellido" placeholder="Apellido" required>
-                    <input type="text" name="Email" placeholder="Email" required>
-                    <button type="submit">Enviar</button>
-                </form>
-                <button>Descargar documentos</button>
-            </div>
-            <div class="paso izquierda">
-                <h3>
-                    Evaluaciones de ingreso
-                </h3>
-                <p>
-                    Materiales para la actividad: fhewkjbgjureoiu
-                </p>
-                <div class="container-materia">
-                    <div class="materia">
-                        <h4>
-                            Matemática
-                        </h4>
-                        <h5>Contenidos:</h5>
-                        <ul>
-                            <li>Contenido 1</li>
-                            <li>Contenido 2</li>
-                            <li>Contenido 3</li>
-                        </ul>
-                        <img src="" alt="">
-                    </div>
-                    <div class="materia">
-                        <h4>Lengua</h4>
-                        <h5>Contenidos:</h5>
-                        <ul>
-                            <li>Contenido 1</li>
-                            <li>Contenido 2</li>
-                            <li>Contenido 3</li>
-                        </ul>
-                        <img src="" alt="">
-                    </div>
-                    <div class="materia">
-                        <h4>Inglés</h4>
-                        <h5>Contenidos:</h5>
-                        <ul>
-                            <li>Contenido 1</li>
-                            <li>Contenido 2</li>
-                            <li>Contenido 3</li>
-                        </ul>
-                        <img src="" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-year">
-            <h2>Ingresos a Segundo y Tercer año</h2>     
-        </div>
+    <script src="inscripciones.js"></script>
+
+    <div class="container-h1">
+        <h1>Inscripciones</h1>
     </div>
+
+    <div class="container-year">
+        <h2 class="titule">Ingreso a Primer año</h2>
+
+        <section class="paso izquierda">
+        <h3 class="centrar">Charlas informativas</h3>
+        <div class="container-mitad">
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non nihil asperiores, doloribus aliquid explicabo, accusamus recusandae voluptatibus adipisci numquam? Suscipit pariatur perferendis aliquid qui et quia consequuntur.</p>
+            </div>
+            <div>
+                <img src="https://picsum.photos/300" alt="Reunión informativa" width="300" height="300">
+            </div>
+        </div>
+        <h3>Próxima charla: Especialidades</h3>
+        <button class="toggle-btn" onclick="mostrarFormulario()">Anotarse a la charla</button>
+
+        <form id="formulario-charla" style="display: none;">
+            <input type="text" name="Nombre" placeholder="Nombre" required>
+            <input type="text" name="Apellido" placeholder="Apellido" required>
+            <input type="email" name="Email" placeholder="Email" required>
+            <input type="tel" name="Telefono" placeholder="Teléfono" required>
+            <button type="submit">Enviar</button>
+        </form>
+        </section>
+
+        <section class="paso derecha">
+        <h3>Entrevista</h3>
+        <p>Entrevista familiar con presentación de documentación.</p>
+        <form action="">
+            <input type="text" name="Nombre" placeholder="Nombre" required>
+            <input type="text" name="Apellido" placeholder="Apellido" required>
+            <input type="email" name="Email" placeholder="Email" required>
+            <button type="submit">Enviar</button>
+        </form>
+        <button class="download-btn">Descargar documentos</button>
+        </section>
+
+        <section class="paso izquierda">
+        <h3>Evaluaciones de ingreso</h3>
+        <p>Materiales necesarios: cartuchera completa, hojas A4, regla, diccionario. No se permite calculadora.</p>
+
+        <div class="container-materia">
+            <article class="materia">
+            <h4>🧮 Matemática</h4>
+            <h5>Contenidos evaluados:</h5>
+            <ul>
+                <li>Operaciones con números enteros</li>
+                <li>Fracciones y decimales</li>
+                <li>Resolución de problemas</li>
+            </ul>
+            </article>
+
+            <article class="materia">
+            <h4>📚 Lengua</h4>
+            <h5>Contenidos evaluados:</h5>
+            <ul>
+                <li>Comprensión lectora</li>
+                <li>Ortografía básica</li>
+                <li>Redacción</li>
+            </ul>
+            </article>
+
+            <article class="materia">
+            <h4>🌍 Inglés</h4>
+            <h5>Contenidos evaluados:</h5>
+            <ul>
+                <li>Vocabulario básico</li>
+                <li>Present simple</li>
+                <li>Comprensión de textos cortos</li>
+            </ul>
+            </article>
+        </div>
+        </section>
+    </div>
+
+    <div class="container-year">
+        <h2>Ingresos a Segundo y Tercer año</h2>
+
+        <section class="paso derecha">
+        <h3>Documentación y Entrevistas</h3>
+        <ul>
+            <li>📄 Solicitud de Inscripción para Regulares</li>
+            <li>📑 Documentación general y certificación de estudios</li>
+            <li>👥 Entrevista con el Equipo de Orientación<br>
+            <small>Se conocerá a la familia y se evaluará la trayectoria escolar del estudiante. Traer boletines e informes.</small>
+            </li>
+            <li>📋 Entrevista con la Prosecretaria Camila Higonet<br>
+            <small>Brindará información institucional, formalizará la inscripción y recibirá la documentación requerida.</small>
+            </li>
+        </ul>
+        </section>
+
+        <section class="paso izquierda">
+        <h3>Proceso de Inscripción para Alumnos de Pase</h3>
+        <p>Según la historia escolar del estudiante, se determinará si debe realizar trayectos de formación complementarios (de cursada obligatoria).</p>
+        <p>Durante las primeras dos semanas de clases se definirán:</p>
+        <ul>
+            <li>📚 Materias complementarias</li>
+            <li>🕘 Horarios de cursada</li>
+            <li>👨‍🏫 Docentes responsables</li>
+        </ul>
+        <p>Los itinerarios serán informados a la familia por disposición interna. La evaluación de aprendizajes se realizará al comenzar la segunda etapa del ciclo escolar (tras el receso invernal).</p>
+        </section>
+    </div>
+
     <footer>
-        
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="img/logo.png" alt="Logo de Huergo" width="120" height="120">
+                <p>Instituto Industrial Luis A. Huergo</p>
+            </div>
+
+            <div class="container-flex-footer">
+                <div class="footer-section">
+                <h4>Contacto</h4>
+                <ul>
+                    <li> Peru 759, C1068AAE</li>
+                    <li>Ciudad de Buenos Aires, San Telmo</li>
+                    <li>Tel / Fax: 4362-9964 / 6091-7640</li>
+                    <li><a href="mailto:info@huergo.edu.ar">info@huergo.edu.ar</a></li>
+                </ul>
+                </div>
+
+                <div class="footer-section">
+                <h4>Enlaces útiles</h4>
+                <ul>
+                    <li><a href="#">Acerca de nosotros</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Aviso legal</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+                </div>
+
+                <div class="footer-section">
+                <h4>Redes sociales</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <img src="img/EscuelasVerdes.png" alt="Logo de Escuelas Verdes" width="150" height="150">
+            <img src="img/unesco.png" alt="Logo de UNESCO" width="150" height="150">
+            <img src="img/undesarrollo.png" alt="Logo de UNESCO" width="225" height="150">
+        </div>
+        <div class="footer-bottom">
+            <hr>
+            <p>Diseño adaptado por Instituto Izaguirre · Basado en plantilla de HTML5 UP</p>
+        </div>
     </footer>
 </body>
 </html>
